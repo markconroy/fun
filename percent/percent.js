@@ -2,6 +2,7 @@ function percentageOfDay() {
   const meter = document.querySelector('.meter');
   const theTimeIs = document.querySelector('.the-time-is');
   const percentagePassed = document.querySelector('.percentage-passed');
+  const percentLeft = document.querySelector('.percent-left');
   const numberOfSecondaInADay = 60 * 60 * 24; 
   
   const currentTime = new Date();
@@ -17,6 +18,7 @@ function percentageOfDay() {
   const percentage = Math.round(secondsSinceMidnight / numberOfSecondaInADay * 100);
   
   theTimeIs.innerText = `${hoursFormatted}:${minutesFormatted}:${secondsFormatted}`;
+  percentLeft.innerText = 100 - percentage;
   meter.setAttribute('value', percentage);  
   percentagePassed.innerText = percentage;
 }

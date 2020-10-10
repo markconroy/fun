@@ -12,6 +12,7 @@ body {
   padding: 5vw;
   max-width: 960px;
   min-height: 100vh;
+  line-height: 1.5;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
 }
 
