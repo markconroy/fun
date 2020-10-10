@@ -1,0 +1,19 @@
+:root {
+  --meter-bar-color: #000;
+}
+
+.meter {
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  border: 2px solid #000;
+  background: #fff;
+}
+
+meter:-moz-meter-optimum::-moz-meter-bar {
+  background: var(--meter-bar-color);
+}
+
+meter::-webkit-meter-optimum-value {
+  background: var(--meter-bar-color);
+}
