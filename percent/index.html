@@ -9,9 +9,19 @@
 </head>
 <body>
   
-  <h1>What percent of the day is it?</h1>
-  <p>The current time is <span class="the-time-is"></span>. This means that <span class="percentage-passed"></span>% of the day has passed. But the good news is, you have <span class="percent-left"></span>% of the day left to do something amazing!</p>
-  <meter class="meter" min="0" max="100" value="0"></meter>
+  <h1>What percent of time it?</h1>
+  <h2>Year</h2>
+  <p><span class="days-passed"></span> passed so far this year. This means that <span class="percent-year-passed"></span>% of the year has passed.</p>
+  <meter class="meter meter--year" min="0" max="100" value="0"></meter>
+  <h2>Month</h2>
+  <p><span class="days-month-passed"></span> passed so far this month. This means that <span class="percent-month-passed"></span>% of the month has passed.</p>
+  <meter class="meter meter--month" min="0" max="100" value="0"></meter>
+  <h2>Week</h2>
+  <p><span class="days-week-passed"></span> passed so far this week. This means that <span class="percent-week-passed"></span>% of the week has passed.</p>
+  <meter class="meter meter--week" min="0" max="100" value="0"></meter>
+  <h2>Day</h2>
+  <p>The current time is <span class="the-time-is"></span>. This means that <span class="percent-time-passed"></span>% of the day has passed.</p>
+  <meter class="meter meter--day" min="0" max="100" value="0"></meter>
   <footer>Created by <a href="https://mark.ie">Mark Conroy</a>. View the source code on <a href="https://github.com/markconroy/fun/tree/main/percent">GitHub</a>.</footer>
 
   <script src="percent.js"></script>
