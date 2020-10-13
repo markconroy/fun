@@ -1,9 +1,12 @@
 function percentageOfTime() {
+
+  // Meters
   const meterDay = document.querySelector('.meter--day');
   const meterYear = document.querySelector('.meter--year');
   const meterMonth = document.querySelector('.meter--month');
   const meterWeek = document.querySelector('.meter--week');
 
+  // Spans to update with content
   const theTimeIs = document.querySelector('.the-time-is');
   const daysPassed = document.querySelector('.days-passed');
   const monthName = document.querySelector('.month-name');
@@ -13,9 +16,13 @@ function percentageOfTime() {
   const percentMonthPassed = document.querySelector('.percent-month-passed');
   const percentWeekPassed = document.querySelector('.percent-week-passed');
   const percentTimePassed = document.querySelector('.percent-time-passed');
+
+  // Chronology
   const numberOfSecondaInADay = 60 * 60 * 24;
   const currentDate = new Date();
   const year = currentDate.getFullYear();
+  const isLeapYear = year % 100 === 0 ? year % 400 === 0 : year % 4 === 0;
+  const daysPassedValue = Math.ceil((currentDate - new Date(currentDate.getFullYear(),0,1)) / 86400000);
   const month = currentDate.getMonth() + 1;
   const monthNameValue = currentDate.toLocaleString('default', { month: 'long' });
   const dayOfMonth = currentDate.getDate();
@@ -26,8 +33,7 @@ function percentageOfTime() {
   const minutes = currentDate.getMinutes();
   const seconds = currentDate.getSeconds();
 
-  const isLeapYear = year % 100 === 0 ? year % 400 === 0 : year % 4 === 0;
-  const daysPassedValue = Math.ceil((currentDate - new Date(currentDate.getFullYear(),0,1)) / 86400000);
+  // Formatted values
   const daysPassedFormatted = daysPassedValue === 1 ? daysPassedValue + ' day has' : daysPassedValue + ' days have';
   const weekPassedFormatted = dayOfWeek === 1 ? dayOfWeek + ' day has' : dayOfWeek + ' days have';
   const hoursFormatted = hours < 10 ? "0" + hours : hours;
@@ -35,11 +41,13 @@ function percentageOfTime() {
   const secondsFormatted = seconds < 10 ? "0" + seconds : seconds;
   const secondsSinceMidnight = (hours * 60 * 60) + (minutes * 60) + seconds;
   
+  // Percents
   const percentYearPassedValue = Math.round(daysPassedValue / (isLeapYear ? 366 : 365) * 100);
   const percentMonthPassedValue = Math.round(dayOfMonth / daysInMonthValue * 100);
   const percentTimePassedValue = Math.round(secondsSinceMidnight / numberOfSecondaInADay * 100);
   const percentWeekPassedValue = Math.round(dayOfWeek / 7 * 100);
   
+  // Update spans
   daysPassed.innerText = daysPassedFormatted;
   percentYearPassed.innerText = percentYearPassedValue;
   monthName.innerText = monthNameValue;
@@ -48,6 +56,8 @@ function percentageOfTime() {
   daysWeekPassed.innerText = weekPassedFormatted;
   percentWeekPassed.innerText = percentWeekPassedValue;
   theTimeIs.innerText = `${hoursFormatted}:${minutesFormatted}:${secondsFormatted}`;
+
+  // Update meters
   meterYear.setAttribute('value', percentYearPassedValue);
   meterMonth.setAttribute('value', percentMonthPassedValue);
   meterWeek.setAttribute('value', percentWeekPassedValue);
@@ -58,6 +68,7 @@ function percentageOfTime() {
 
 percentageOfTime();
 
+// Update values every second
 setInterval(() => {
   percentageOfTime()
 }, 1000);
