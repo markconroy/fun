@@ -1,4 +1,4 @@
-function percentageOfDay() {
+function percentageOfTime() {
   const meterDay = document.querySelector('.meter--day');
   const meterYear = document.querySelector('.meter--year');
   const meterMonth = document.querySelector('.meter--month');
@@ -56,8 +56,8 @@ function percentageOfDay() {
 
 }
 
-percentageOfDay();
+percentageOfTime();
 
 setInterval(() => {
-  percentageOfDay()
+  percentageOfTime()
 }, 1000);
