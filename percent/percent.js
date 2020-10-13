@@ -56,13 +56,13 @@ function percentageOfTime() {
   daysWeekPassed.innerText = weekPassedFormatted;
   percentWeekPassed.innerText = percentWeekPassedValue;
   theTimeIs.innerText = `${hoursFormatted}:${minutesFormatted}:${secondsFormatted}`;
+  percentTimePassed.innerText = percentTimePassedValue;
 
   // Update meters
   meterYear.setAttribute('value', percentYearPassedValue);
   meterMonth.setAttribute('value', percentMonthPassedValue);
   meterWeek.setAttribute('value', percentWeekPassedValue);
   meterDay.setAttribute('value', percentTimePassedValue);
-  percentTimePassed.innerText = percentTimePassedValue;
 
 }
 
