@@ -1,0 +1,44 @@
+:root {
+  --meter-bar-color: #000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 5vw;
+  max-width: 960px;
+  line-height: 1.5;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+}
+
+.colour-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  padding: 0;
+  list-style: none;
+}
+
+.list-item {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.list-item__panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.list-item__hex {
+  padding: 0.5rem;
+}
