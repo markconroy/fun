@@ -31,7 +31,7 @@ body {
   flex-direction: column;
   border: 1px solid #000;
   border-radius: var(--border-radius);
-  box-shadow: 1px 1px 1px 1px #000000cc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
@@ -49,6 +49,8 @@ body {
   border-right: 1px solid #000;
   border-bottom: 1px solid #000;
   border-radius: var(--border-radius) 0 var(--border-radius) 0;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 .list-item__hex {
