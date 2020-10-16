@@ -12,7 +12,9 @@ fetch(baseURL)
       listItem = document.createElement('li');
       listItem.classList.add('list-item');
       listItem.innerHTML = `
-        <div class="list-item__panel" style="background-color: ${datum.hex}">${datum.name}</div>
+        <div class="list-item__panel" style="background-color: ${datum.hex}">
+          <span class="list-item__name">${datum.name}</span>
+        </div>
         <div class="list-item__hex">${datum.hex}</div>
       `
       list.appendChild(listItem);

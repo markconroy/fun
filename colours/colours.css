@@ -1,5 +1,6 @@
 :root {
   --meter-bar-color: #000;
+  --border-radius: 5px;
 }
 
 *,
@@ -18,7 +19,7 @@ body {
 
 .colour-list {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   padding: 0;
   list-style: none;
@@ -29,16 +30,30 @@ body {
   display: flex;
   flex-direction: column;
   border: 1px solid #000;
+  border-radius: var(--border-radius);
+  box-shadow: 1px 1px 1px 1px #000000cc;
   text-align: center;
 }
 
 .list-item__panel {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex: 1;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.list-item__name {
+  background-color: #fff;
+  padding: 0.25rem .5rem;
+  margin-bottom: auto;
+  margin-right: auto;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-radius: var(--border-radius) 0 var(--border-radius) 0;
 }
 
 .list-item__hex {
   padding: 0.5rem;
+  border-top: 1px solid #000;
+  border-radius: 0 0 5px 5px;
+  background-color: #e1e1e1;
 }
