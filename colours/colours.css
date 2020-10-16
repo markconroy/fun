@@ -17,6 +17,26 @@ body {
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
 }
 
+.colour-search {
+  max-width: 300px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.colour-search__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.colour-search__input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #000;
+  border-radius: var(--border-radius);
+}
+
 .colour-list {
   display: grid;
   gap: 2rem;

@@ -1,11 +1,11 @@
 const baseURL = 'https://sampleapis.com/css-color-names/api/colors';
 const list = document.querySelector('.colour-list');
+const input = document.querySelector('.colour-search__input');
 
 fetch(baseURL)
   .then(resp => resp.json())
   .then(data => {
-    data
-    .sort(function (a, b) {
+    data.sort(function (a, b) {
       return a.name.localeCompare(b.name)
     })
     .forEach(datum => {
@@ -19,6 +19,20 @@ fetch(baseURL)
       `
       list.appendChild(listItem);
     });
-  });
+    
+    const listOfColours = document.querySelectorAll('.list-item');
 
+    function handleInputChange() {
+      let inputValue = input.value.toLowerCase();
+      listOfColours.forEach(listOfColour => {
+        if (!listOfColour.innerText.toLowerCase().includes(inputValue)) {
+          listOfColour.style.display = 'none';
+        } else {
+          listOfColour.style.display = 'flex';
+        }
+      });
+    }
+      
+    input.addEventListener('input', handleInputChange);
   
+});
