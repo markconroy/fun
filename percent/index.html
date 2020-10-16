@@ -7,7 +7,7 @@
   <title>What Percent of Time is It?</title>
 </head>
 <body>
-  
+
   <h1>What Percent of Time is It?</h1>
 
   <div class="percent__item">
@@ -32,6 +32,13 @@
     <h2>Day</h2>
     <p>The current time is <span class="the-time-is"></span>. This means that <span class="percent-time-passed"></span>% of the day has passed.</p>
     <meter class="meter meter--day" min="0" max="100" value="0"></meter>
+  </div>
+
+  <div class="percent__item">
+    <h2>WorkDay</h2>
+    <p><label for="work-start-hour">Start Work at</label> <input type="number" id="work-start-hour" name="workday start hour" min="0" max="24" value="9"> and <label for="work-end-hour">Finish Work at</label> <input type="number" id="work-end-hour" name="workday end hour" min="0" max="24" value="18"></p>
+    <p><span class="percent-worktime-passed"></span>% of the working day has passed.</p>
+    <meter class="meter meter--workday" min="0" max="100" value="0"></meter>
   </div>
 
   <footer>Created by <a href="https://mark.ie">Mark Conroy</a>. View the source code on <a href="https://github.com/markconroy/fun/tree/main/percent">GitHub</a>.</footer>
