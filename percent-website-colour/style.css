@@ -55,7 +55,7 @@ body {
 .footer a:focus {
   box-shadow: inset 0px 30px 0px 0px var(--colour-primary);
   text-decoration: none;
-  color: var(--colour-primary);
+  color: var(--colour-secondary);
 }
 
 .header__nav {
