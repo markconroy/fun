@@ -53,8 +53,9 @@ body {
 .header a:focus,
 .footer a:hover,
 .footer a:focus {
-  box-shadow: inset 0px 3px 0px 0px var(--colour-primary);
+  box-shadow: inset 0px 30px 0px 0px var(--colour-primary);
   text-decoration: none;
+  color: var(--colour-primary);
 }
 
 .header__nav {
