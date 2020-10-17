@@ -47,7 +47,7 @@ body {
   color: var(--colour-primary);
   background-color: var(--colour-secondary);
   padding: 0.5rem 1rem;
-  transition: .3s;
+  transition: .5s;
 }
 .header a:hover,
 .header a:focus,
