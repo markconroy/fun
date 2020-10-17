@@ -5,8 +5,7 @@ function percentageOfTime() {
   const minutes = currentDate.getMinutes();
   const seconds = currentDate.getSeconds();
   const secondsSinceMidnight = (hours * 60 * 60) + (minutes * 60) + seconds;
-  // const percentTimePassed = Math.round(secondsSinceMidnight / numberOfSecondaInADay * 100);
-  const percentTimePassed = 40;
+  const percentTimePassed = Math.round(secondsSinceMidnight / numberOfSecondaInADay * 100);
   const rootStyle = document.documentElement.style;
   rootStyle.setProperty('--percent-passed', percentTimePassed + '%')
   percentTimePassed < 50 ? rootStyle.setProperty('--colour-secondary', '#fff') : rootStyle.setProperty('--colour-secondary', '#000');
