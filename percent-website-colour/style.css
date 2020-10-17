@@ -25,6 +25,8 @@ body {
 .container {
   max-width: 960px;
   margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .header,
@@ -44,6 +46,7 @@ body {
 
 .header a,
 .footer a {
+  display: inline-block;
   color: var(--colour-primary);
   background-color: var(--colour-secondary);
   padding: 0.5rem 1rem;
@@ -60,6 +63,12 @@ body {
 
 .header__nav {
   margin-left: auto;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.header__nav::-webkit-scrollbar { 
+  display: none;
 }
 
 .header__menu {
