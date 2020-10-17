@@ -1,0 +1,87 @@
+:root {
+  --percent-passed: 0%;
+  --percent-left: calc(100% - var(--percent-passed));
+  --colour-primary: hsl(0, var(--percent-left), var(--percent-passed));
+  --colour-secondary: hsl(0, var(--percent-left), var(--percent-left));
+}
+bod {
+  color: hsl(199, 76%, 24%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+  background-color: var(--colour-secondary);
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.header,
+.footer {
+  background-color: var(--colour-primary);
+  color: var(--colour-secondary);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 200%;
+}
+
+.header a,
+.footer a {
+  color: var(--colour-primary);
+  background-color: var(--colour-secondary);
+  padding: 0.5rem 1rem;
+  transition: .3s;
+}
+.header a:hover,
+.header a:focus,
+.footer a:hover,
+.footer a:focus {
+  box-shadow: inset 0px 3px 0px 0px var(--colour-primary);
+  text-decoration: none;
+}
+
+.header__nav {
+  margin-left: auto;
+}
+
+.header__menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.header__menu-item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.main {
+  color: var(--colour-primary);
+}
+
+.main__inner {
+  max-width: 600px;
+}
+.footer {
+  margin-top: auto;
+}
