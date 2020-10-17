@@ -4,9 +4,6 @@
   --colour-primary: hsl(0, var(--percent-left), var(--percent-passed));
   --colour-secondary: hsl(0, var(--percent-left), var(--percent-left));
 }
-bod {
-  color: hsl(199, 76%, 24%);
-}
 
 *,
 *::before,
