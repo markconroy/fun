@@ -70,7 +70,6 @@ body {
   border-bottom: 1px solid #000;
   border-radius: var(--border-radius) 0 var(--border-radius) 0;
   font-weight: bold;
-  text-transform: capitalize;
 }
 
 .list-item__hex {

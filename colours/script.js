@@ -1,21 +1,18 @@
-const baseURL = 'https://sampleapis.com/css-color-names/api/colors';
+const baseURL = 'https://raw.githubusercontent.com/bahamas10/css-color-names/master/css-color-names.json';
 const list = document.querySelector('.colour-list');
 const input = document.querySelector('.colour-search__input');
 
 fetch(baseURL)
   .then(resp => resp.json())
   .then(data => {
-    data.sort(function (a, b) {
-      return a.name.localeCompare(b.name)
-    })
-    .forEach(datum => {
+    Object.keys(data).forEach(datum => {
       listItem = document.createElement('li');
       listItem.classList.add('list-item');
       listItem.innerHTML = `
-        <div class="list-item__panel" style="background-color: ${datum.hex}">
-          <span class="list-item__name">${datum.name}</span>
+        <div class="list-item__panel" style="background-color: ${data[datum]}">
+          <span class="list-item__name">${datum}</span>
         </div>
-        <div class="list-item__hex">${datum.hex}</div>
+        <div class="list-item__hex">${data[datum]}</div>
       `
       list.appendChild(listItem);
     });
