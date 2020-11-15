@@ -1,19 +1,19 @@
-const tagsList = document.querySelector(".tags");
+const tags = document.querySelector(".tags");
 
 function handleResult(result) {
   const name = result.name;
   const numberOfFilms = result.films.length;
-  listItem = document.createElement("li");
-  listItem.classList.add("tag");
-  listItem.innerHTML = `${name} (${numberOfFilms})`;
-  tagsList.appendChild(listItem);
+  tag = document.createElement("li");
+  tag.classList.add("tag");
+  tag.innerHTML = `${name} (${numberOfFilms})`;
+  tags.appendChild(tag);
 }
 
-fetch(`https://swapi.dev/api/people`)
+fetch(`https://swapi.dev/api/people/`)
   .then(function (res) {
     return res.json();
   })
   .then(function (data) {
     const results = data.results;
-    results.forEach(result => handleResult(result));
+    results.forEach((result) => handleResult(result));
   });
