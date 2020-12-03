@@ -1,23 +1,22 @@
 const dataURL =
-  "https://gist.githubusercontent.com/markconroy/ddb798678e17a918824644f17bca487c/raw/a4eeacd28fad81b0b828d0dda6ece2dcf193031b/tags.json";
+  "https://gist.githubusercontent.com/markconroy/536228ed416a551de8852b74615e55dd/raw/cc3e4082007f1a8f39ce4b2d3569c8735b347f83/tags.json";
 const tags = document.querySelector(".tags");
+const maxFontSizeForTag = 6;
 
-function handleResult(result) {
+function handleResult(result, highestValue) {
   // Set our variables
   const numberOfArticles = result.tagged_articles.length;
-  let fontSize = numberOfArticles * 1.25;
   const name = result.title;
   const link = result.href;
+  let fontSize = numberOfArticles / highestValue * maxFontSizeForTag;
+  fontSize = +fontSize.toFixed(2);
   
-  // First, set the font-size depending on how many articles each tag has.
-  if (fontSize <= 2) {
+  // Make sure our font size will be at least 1em
+  if (fontSize <= 1) {
     fontSize = 1;
-  } else if (fontSize >= 5) {
-    fontSize = 5;
   } else {
     fontSize = fontSize;
   }
-  
   const fontSizeProperty = `${fontSize}em`;
 
   // Then, create a list element for each tag and inline the font size.
@@ -35,5 +34,15 @@ fetch(dataURL)
     return res.json();
   })
   .then(function (data) {
-    data.forEach((result) => handleResult(result));
+    // 1. Create a new array from data
+    let orderedData = data.map((x) => x);
+    // 2. Order it by number of articles each tag has
+    orderedData.sort(function(a, b) {
+      return a.tagged_articles.length > b.tagged_articles.length;
+    });
+    orderedData = orderedData.reverse();
+    // 3. Get a value for the tag with the most articles
+    const highestValue = orderedData[0].tagged_articles.length;
+    // 4. Create a list item for each result from data.
+    data.forEach((result) => handleResult(result, highestValue));
   });
