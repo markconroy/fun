@@ -1,6 +1,7 @@
 const dataURL =
   "https://gist.githubusercontent.com/markconroy/536228ed416a551de8852b74615e55dd/raw/cc3e4082007f1a8f39ce4b2d3569c8735b347f83/tags.json";
 const tags = document.querySelector(".tags");
+const fragment = document.createDocumentFragment();
 const maxFontSizeForTag = 6;
 
 function handleResult(result, highestValue) {
@@ -24,9 +25,8 @@ function handleResult(result, highestValue) {
   tag.classList.add("tag");
   tag.innerHTML = `<a class="tag__link" href="${link}" style="font-size: ${fontSizeProperty}">${name} (${numberOfArticles})</a>`;
 
-  // if (numberOfArticles > 1) {
-  tags.appendChild(tag);
-  // }
+  // Append each tag to the fragment
+  fragment.appendChild(tag);
 }
 
 fetch(dataURL)
@@ -45,4 +45,7 @@ fetch(dataURL)
     const highestValue = orderedData[0].tagged_articles.length;
     // 4. Create a list item for each result from data.
     data.forEach((result) => handleResult(result, highestValue));
+    // if (data.length > 1) {
+      tags.appendChild(fragment);
+    // }
   });
