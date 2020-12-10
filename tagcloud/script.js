@@ -38,13 +38,14 @@ fetch(dataURL)
     let orderedData = data.map((x) => x);
     // 2. Order it by number of articles each tag has
     orderedData.sort(function(a, b) {
-      return a.tagged_articles.length > b.tagged_articles.length;
+      return a.tagged_articles.length - b.tagged_articles.length;
     });
     orderedData = orderedData.reverse();
     // 3. Get a value for the tag with the most articles
     const highestValue = orderedData[0].tagged_articles.length;
     // 4. Create a list item for each result from data.
     data.forEach((result) => handleResult(result, highestValue));
+    // 5. Append all the tags to the tags element.
     // if (data.length > 1) {
       tags.appendChild(fragment);
     // }
