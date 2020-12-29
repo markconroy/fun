@@ -1,0 +1,90 @@
+:root {
+  --back-to-top-size: 60px;
+  --space: 2rem;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background-color: #131313;
+  color: white;
+  max-width: 960px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+a {
+  color: #ffd560;
+}
+
+p + p {
+  margin-top: 1.5rem;
+}
+
+header,
+footer {
+  font-family: sans-serif;
+}
+
+footer {
+  padding: 3rem 0 1rem;
+}
+
+h2 {
+  margin-top: 3rem;
+}
+
+h3 {
+  padding: 0.5rem;
+  background-color: #ffd560aa;
+  color: black;
+}
+
+a + h3 {
+  margin-top: 2rem;
+}
+
+.main {
+  position: relative;
+  padding-right: calc(var(--back-to-top-size) + var(--space));
+  padding-bottom: calc(var(--back-to-top-size) + var(--space));
+}
+
+.back-to-top {
+  position: absolute;
+  top: 100vh;
+  right: var(--space);
+  bottom: var(--space);
+  width: var(--back-to-top-size);
+}
+
+.back-to-top__link {
+  position: fixed;
+  position: sticky;
+  top: calc(100vh - var(--back-to-top-size) - var(--space));
+  right: var(--space);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: var(--back-to-top-size);
+  height: var(--back-to-top-size);
+  padding: 0.5rem;
+  text-decoration: none;
+  color: black;
+  border-radius: 50%;
+  border: 1px solid #ffd560;
+  background-color: #ffd560;
+  transition: .3s;
+}
+
+.back-to-top__link:focus,
+.back-to-top__link:hover {
+  text-decoration: underline;
+  background-color: black;
+  color: white;
+}
