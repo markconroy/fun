@@ -88,3 +88,13 @@ body {
     forced-color-adjust: auto;
   }
 }
+
+@media (-ms-high-contrast: active) {
+  .list-item__panel {
+    -ms-high-contrast-adjust: none;
+  }
+
+  .list-item__panel > * {
+    -ms-high-contrast-adjust: auto;
+  }
+}
