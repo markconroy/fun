@@ -78,3 +78,23 @@ body {
   border-radius: 0 0 5px 5px;
   background-color: #e1e1e1;
 }
+
+@media (forced-colors: active) {
+  .list-item__panel {
+    forced-color-adjust: none;
+  }
+
+  .list-item__panel > * {
+    forced-color-adjust: auto;
+  }
+}
+
+@media (-ms-high-contrast: active) {
+  .list-item__panel {
+    -ms-high-contrast-adjust: none;
+  }
+
+  .list-item__panel > * {
+    -ms-high-contrast-adjust: auto;
+  }
+}
