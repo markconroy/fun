@@ -1,0 +1,73 @@
+:root {
+  --meter-bar-color: #000;
+  --border-radius: 5px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 5vw;
+  max-width: 960px;
+  line-height: 1.5;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+}
+
+.password > * {
+  margin-bottom: 3rem;
+}
+
+.password__colours-list {
+  display: flex;
+  border-radius: 5px;
+}
+
+.password__colour {
+  flex-grow: 1;
+  height: 2rem;
+  border: 1px solid black;
+}
+
+.password__colour--1 {
+  border-right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.password__colour--2 {
+  border-right: 0;
+}
+
+.password__colour--4 {
+  border-left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.password__is {
+  padding: .25rem;
+  font-weight: bold;
+  background-color: lemonchiffon;
+  
+}
+
+.password__reset-button {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: lemonchiffon;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: .3s;
+}
+.password__reset-button:focus,
+.password__reset-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.password__reset-button:active {
+  transform: scale(.95);
+}

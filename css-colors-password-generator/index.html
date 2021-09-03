@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate passwords based on CSS colors.">
+  <link rel="stylesheet" href="style.css">
+  <title>CSS Colors Password Generator</title>
+</head>
+
+<body>
+
+  <h1>CSS Colors Password Generator</h1>
+
+  <h2>Your current password</h2>
+  <p>Sure, your current password is strong, but is it pretty? With this high tech machine, you can have a strong AND
+    pretty password. </p>
+
+  <h2>Your new password</h2>
+  <div class="password">
+    <p>Your new password is:
+      <span class="password__is"></span>
+    </p>
+
+    <div class="password__colours">
+      <p>It looks like this:</p>
+      <div class="password__colours-list">
+        <div class="password__colour password__colour--1"></div>
+        <div class="password__colour password__colour--2"></div>
+        <div class="password__colour password__colour--3"></div>
+        <div class="password__colour password__colour--4"></div>
+      </div>
+    </div>
+
+    <div class="password__reset">
+      <input type="submit" class="password__reset-button" value="Generate new password">
+    </div>
+  </div>
+
+  <footer>Created by <a href="https://mark.ie">Mark Conroy</a>. View the source code on
+    <a href="https://github.com/markconroy/fun/tree/main/css-colors-password-generator">GitHub</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
