@@ -20,6 +20,11 @@ body {
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
 }
 
+footer {
+  margin-top: auto;
+  border-top: 1px solid black;
+}
+
 h2 {
   margin-bottom: 0;
 }

@@ -32,6 +32,7 @@ footer {
 
 footer {
   padding: 3rem 0 1rem;
+  border-top: 1px solid white;
 }
 
 h2 {

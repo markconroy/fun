@@ -10,11 +10,19 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 5vw;
   max-width: 960px;
   line-height: 1.5;
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
+}
+
+footer {
+  margin-top: auto;
+  border-top: 1px solid black;
 }
 
 .colour-search {

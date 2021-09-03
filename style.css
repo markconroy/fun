@@ -16,6 +16,10 @@ body {
   font-family: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
 }
 
+footer {
+  border-top: 1px solid black;
+}
+
 h1 {
   margin-top: 0;
 }
