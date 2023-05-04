@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,23 @@
   <link rel="stylesheet" href="style.css">
   <title>Read this Page!</title>
 </head>
-<body>
-  <h1>Read this Page!</h1>
 
-  <p>Drag this <a href="
+<body>
+  <header>
+    <h1>Read this Page!</h1>
+  </header>
+
+  <main>
+    <p>Drag this <a href="
     javascript: (() => {const noScripts = document.querySelectorAll('noscript');noScripts.forEach((noScript) => {noScript.remove();});function readOutLoud(message) {const speech = new SpeechSynthesisUtterance();speech.text = message;speech.volume = 1;speech.rate = 0.9;speech.pitch = 1;window.speechSynthesis.speak(speech);}const itemToRead = document.querySelector('body').textContent;readOutLoud(itemToRead);})();
-">Read this Page</a> link to your bookmarks bar, open any website and this click on that bookmark to have the page read to you.</p>
-  <p>
-    Why did I make this?<br>
-    Simple. I've looked at some text-to-speech web readers and thought, I can build one of those quite simply. So I did. Here's the code:
-  </p>
-  <pre>
+">Read this Page</a> link to your bookmarks bar, open any website and this click on that bookmark to have the page read
+      to you.</p>
+    <p>
+      Why did I make this?<br>
+      Simple. I've looked at some text-to-speech web readers and thought, I can build one of those quite simply. So I
+      did. Here's the code:
+    </p>
+    <pre>
     <code>
       javascript: (() => {
         // Removing the noscript tags, since this can't work without JS,
@@ -42,5 +49,11 @@
       })();
     </code>
   </pre>
+  </main>
+  <footer>
+    <p>Created by <a href="https://mark.ie">Mark Conroy</a>. Code is available on <a
+        href="https://github.com/markconroy/fun/tree/main/read-this-page">GitHub</a>.</p>
+  </footer>
 </body>
+
 </html>
