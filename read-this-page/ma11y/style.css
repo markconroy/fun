@@ -1,4 +1,6 @@
 .ma11y-tools {
+  position: relative;
+  z-index: 2147483647;
   width: 100%;
   padding: 1rem;
   border-bottom: 2px solid black;
