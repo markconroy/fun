@@ -1,8 +1,6 @@
 .ma11y-tools {
   position: relative;
   z-index: 2147483647;
-  display: flex;
-  gap: 1rem;
   width: 100%;
   padding: 1rem;
   border-bottom: 2px solid black;
@@ -15,6 +13,11 @@
   margin-left: auto;
   padding-right: 1rem;
   padding-left: 1rem;
+}
+
+.ma11y-buttons {
+  display: flex;
+  gap: 1rem;
 }
 
 .ma11y-tools__button {

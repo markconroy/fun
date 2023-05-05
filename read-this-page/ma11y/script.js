@@ -3,9 +3,11 @@ const body = document.querySelector("body");
 const container = `
   <div id="ma11y-tools" class="ma11y-tools">
     <div class="ma11y-container">
-      <button type="button" class="ma11y-tools__button ma11y-tools__button--play">Start</button>
-      <button type="button" class="ma11y-tools__button ma11y-tools__button--stop">Stop</button>
-      <button type="button" class="ma11y-tools__button ma11y-tools__button--selected">Read Selected Text</button>
+      <div class="ma11y-buttons">
+        <button type="button" class="ma11y-tools__button ma11y-tools__button--play">Start</button>
+        <button type="button" class="ma11y-tools__button ma11y-tools__button--stop">Stop</button>
+        <button type="button" class="ma11y-tools__button ma11y-tools__button--selected">Read Selected Text</button>
+      </div>
     </div>
   </div>
 `;
