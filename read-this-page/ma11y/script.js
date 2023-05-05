@@ -12,7 +12,7 @@ const container = `
   </div>
 `;
 // Add the container to the page
-body.insertAdjacentHTML("beforeend", container);
+body.insertAdjacentHTML("afterbegin", container);
 
 const startButton = document.querySelector(".ma11y-tools__button--play");
 const stopButton = document.querySelector(".ma11y-tools__button--stop");
