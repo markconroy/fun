@@ -56,3 +56,6 @@ footer {
 .ma11y-tools__button--stop {
   background-color: rgb(255, 167, 167);
 }
+.ma11y-tools__button--selected {
+  background-color: rgb(226, 226, 226);
+}

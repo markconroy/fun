@@ -5,7 +5,7 @@ const container = `
     <div class="ma11y-container">
       <button type="button" class="ma11y-tools__button ma11y-tools__button--play">Start</button>
       <button type="button" class="ma11y-tools__button ma11y-tools__button--stop">Stop</button>
-      <button type="button" class="ma11y-tools__button ma11y-tools__button--select-text">Read Selected Text</button>
+      <button type="button" class="ma11y-tools__button ma11y-tools__button--selected">Read Selected Text</button>
     </div>
   </div>
 `;
@@ -15,9 +15,8 @@ body.insertAdjacentHTML("afterbegin", container);
 const startButton = document.querySelector(".ma11y-tools__button--play");
 const stopButton = document.querySelector(".ma11y-tools__button--stop");
 const selectTextButton = document.querySelector(
-  ".ma11y-tools__button--select-text"
+  ".ma11y-tools__button--selected"
 );
-
 
 // Read out loud function
 function readOutLoud(message) {
