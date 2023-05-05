@@ -24,38 +24,3 @@ footer {
   margin-top: auto;
   border-top: 1px solid black;
 }
-
-.ma11y-tools {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem;
-  border-bottom: 1px solid black;
-  background-color: azure;
-}
-
-.ma11y-container {
-  max-width: 960px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-.ma11y-tools__button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: black;
-  border: 2px solid black;
-  border-radius: var(--border-radius);
-}
-.ma11y-tools__button--play {
-  background-color: aquamarine;
-}
-.ma11y-tools__button--stop {
-  background-color: rgb(255, 167, 167);
-}
-.ma11y-tools__button--selected {
-  background-color: rgb(226, 226, 226);
-}
