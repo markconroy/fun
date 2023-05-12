@@ -27,7 +27,7 @@
     <p>After completing the above, I thought, 'Why not make it more fully-fledged?', so here's a new bookmark to drag to
       your bookmarks bar <a
         href="
-        javascript: (() => {const script = document.createElement('script');script.src = 'https://ma11y.mark.ie/ma11y/script.js';const body = document.querySelector('body');body.appendChild(script);setTimeout(() => {document.querySelector('#ma11y-tools').removeAttribute('hidden');},250);})();
+        javascript: (() => {const ma11yBmInitScript = document.createElement('script');ma11yBmInitScript.src = 'https://ma11y.mark.ie/ma11y/bookmarklet.js';const ma11yBmInitBody = document.querySelector('body');ma11yBmInitBody.appendChild(ma11yBmInitScript);})();
         ">ma11y</a>.
     </p>
     <p>
